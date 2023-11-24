@@ -8,7 +8,7 @@ import Footer from './components/footer'
 import Landing from './pages/Landing'
 import Gallery from './pages/Gallery'
 import Payments from './pages/Payments'
-import ErrorPage from './pages/Errorpage';
+import ErrorPage from './pages/ErrorPage';
 
 function App() {
   const [count, setCount] = useState(0)
