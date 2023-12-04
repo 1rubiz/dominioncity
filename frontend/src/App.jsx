@@ -5,11 +5,11 @@ import './App.css'
 import {Routes, Route, BrowserRouter} from 'react-router-dom'
 import Nav from './components/nav'
 import Footer from './components/footer'
-import Landing from './pages/landing'
+import Landing from './pages/Landing'
 import Gallery from './pages/Gallery'
 import Payments from './pages/Payments'
-import ErrorPage from './pages/Errorpage';
 import Media from './pages/Media'
+import ErrorPage from './pages/ErrorPage';
 
 function App() {
   const [count, setCount] = useState(0)
