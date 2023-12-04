@@ -1,8 +1,48 @@
 import React, {useState, useEffect} from 'react'
 import {motion} from 'framer-motion'
+import { createClient } from "@supabase/supabase-js";
+import Loading from './loading'
 
-export default function Slideshow({images}){
+export default function Slideshow(){
+  const supabaseUrl = import.meta.env.VITE_PUBLIC_SUPABASE_URL;
+  const supabaseKey = import.meta.env.VITE_PUBLIC_SUPABASE_KEY;
+  const supabase = createClient(supabaseUrl, supabaseKey);
+  const CDNURL = import.meta.env.VITE_CDNURL;
+
+    const [errs, setErrs]= useState('')
+  const [loading, setLoading] = useState(false);
 	const [num, setNum] = useState(0)
+  const [images, setImages] = useState(['/logo.jpg'])
+      useEffect(()=>{
+        setLoading(true);
+        const getImages= async ()=>{
+              const { data, error } = await supabase
+            .storage
+            .from('gallery')
+            .list('carousel', {
+              limit: 100,
+              offset: 0,
+              sortBy: { column: 'name', order: 'asc' },
+            })
+            if(error){ setErrs('Error loading images.....Try refreshing')}
+            if(data.length > 0){
+              if(data[0].name[0] === '.'){
+                  setLoading(false)
+                  return;
+                }else{
+                  data.map((item)=>{
+                    console.log(item)
+                      const newItem = `${CDNURL}${item.name}`; // You can replace this with the actual item you want to add
+                      setImages(prevArray => [...prevArray, newItem]);
+                  })
+                  setErrs('')
+                  setLoading(false)
+                }
+            }
+      }
+      getImages()
+  }, [])
+
 	  useEffect(() => {
     const interval = setInterval(() => {
       // Move to the next image
@@ -11,7 +51,9 @@ export default function Slideshow({images}){
 
     // Clear the interval when the component unmounts
     return () => clearInterval(interval);
+      console.log(images)
   }, [num, images.length]);
+
 
 	return(
 		<div
@@ -35,7 +77,6 @@ export default function Slideshow({images}){
               }
             })
           }
-
         </div>
 		)
 }

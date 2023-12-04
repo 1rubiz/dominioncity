@@ -134,7 +134,7 @@ import { motion } from 'framer-motion'
 // import donate from '../assets/img1.jpg'
 import { FaCreditCard } from 'react-icons/fa'
 import React, { useState } from "react";
-// import { PaystackButton } from "react-paystack";
+import { PaystackButton } from "react-paystack";
 import { useNavigate } from "react-router-dom";
 // import img from '../assets/img5.jpg'
 // import logo from '/logo.jpg'
@@ -144,7 +144,7 @@ function Payments() {
   const publicKey = "pk_test_32b249e416818f500de8009ac50e29976a45cab8"
 //   const amount = 924
     const [email, setEmail] = useState("")
-    const [amount, setAmount] = useState(0);
+    const [amounts, setAmount] = useState(0);
   const [name, setName] = useState("")
   const [phone, setPhone] = useState("")
   const [errs, setErrs] = useState('')
@@ -153,7 +153,7 @@ function Payments() {
   const navigate = useNavigate();
   const success =async ()=>{
     // await axios.post("https://eclat-backend-server.onrender.com/mail",body)
-    navigate('/home');
+    navigate('/');
   }
 
 
@@ -170,6 +170,7 @@ function Payments() {
     setChoiceErr('')
     setChoice(e.target.id)
   }
+  let amount = amounts * 100;
 // <PaystackButton {...componentProps} className='btn'/>
   // const button = (email ? (<button className='' onClick={handleClick}> Donates</button>) : )
 
@@ -212,7 +213,7 @@ function Payments() {
       initial={{opacity: 0, y: -100}}
       animate={{opacity: 1, y: 0}}
       transition={{duration: 4}}
-      className='h-[290px] md:h-[300px] top-[25vh] w-[88%] z-3 md:absolute ml-[6%] flex justify-center items-center lg:right-16 lg:w-[40%]'
+      className='h-[290px] md:h-[300px] top-[25vh] w-[88%] z-3 md:absolute ml-[6%] flex justify-center items-center lg:right-16 md:w-[40%] md:right-[10vh]'
       style={{boxShadow: 'rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px'}}
       >
         <div
@@ -255,7 +256,7 @@ function Payments() {
         transition={{duration: 1}}
         >
         <button className={`${(!email[0] || (amount < 1) || !name[0] || !phone[0]) ? 'block' : 'hidden'}`} onClick={handleClick}> Make Payments</button>
-        {/*<span className={`${(email[0] && (amount > 0) && name[0] && phone[0]) ? 'block' : 'hidden'}`}><PaystackButton {...componentProps} className={`${(email[0] !== null) ? 'block' : 'hidden'} btn`}/></span>*/}
+        <span className={`${(email[0] && (amount > 0) && name[0] && phone[0]) ? 'block' : 'hidden'}`}><PaystackButton {...componentProps} className={`${(email[0] !== null) ? 'block' : 'hidden'} btn`}/></span>
         <FaCreditCard/>
         </motion.li>
         </div>
@@ -265,7 +266,7 @@ function Payments() {
       initial={{opacity: 0, y: -100}}
       animate={{opacity: 1, y: 0}}
       transition={{duration: 4}}
-      className=' h-[150px] md:h-[300px] md:top-[25vh] w-[88%] z-3 md:absolute ml-[6%] flex justify-center items-center lg:left-0 lg:w-[40%]'
+      className=' h-[150px] md:h-[300px] md:top-[25vh] w-[88%] z-3 md:absolute ml-[6%] flex justify-center items-center lg:left-0 md:w-[40%]'
       style={{boxShadow: 'rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px'}}
       >
         <div

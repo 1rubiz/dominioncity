@@ -28,7 +28,7 @@ export default function Landing(){
 	    		loading && <Loading/>
 	    	}
 	      <div className='relative m-[4%] w-[90%] h-[50vh]'> 
-	      	<Slideshow images={images} />
+	      	<Slideshow/>
 	      </div>
 	      <div className='w-[100%] text-[black]' onClick={handleDays}>
 	      	<p className='text-center text-[white] font-semibold text-[3.3vh] font-serif'>Days of service</p>

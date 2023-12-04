@@ -76,7 +76,7 @@ function Nav() {
         }
         </AnimatePresence>
     </div>
-    <nav className="bg-white h-[15.3vh] w-[100%] fixed top-0 left-0 z-10 transparent hidden md:block">
+    <nav className="bg-white h-[16.4vh] w-[100%] fixed top-0 left-0 z-10 transparent hidden md:block">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center">

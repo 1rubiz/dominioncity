@@ -11,8 +11,10 @@ export default function About(){
             >
                 <h1 className='flex justify-center items-center gap-3 bg-[#427D9D] text-[3vh] text-white font-semibold font-serif'>WELCOME</h1>
                 <p>
-                  Justo eget magna fermentum iaculis eu non diam.
-                  Justo eget magna fermentum iaculis eu non diam.  
+                  Welcome to Chapel of Dominion ministries digital space; we are a community bound by the
+                 love of Christ and dedicated to sharing His message of hope, grace, and
+                 redemption. Nestled in the heart of OGIDA QUARTERS, BENIN CITY, our church family extends a heartfelt
+                 welcome to all seeking a deeper connection with God and fellow believers.
                 </p>
             </div>
             <div className='m-6 lg:grid lg:grid-cols-3 gap-7'>
@@ -39,8 +41,11 @@ export default function About(){
                 >
                     <h1 className='flex justify-center items-center gap-3 bg-[#427D9D] text-[3vh] text-white font-semibold font-serif'>ABOUT US</h1>
                     <p>
-                    Justo eget magna fermentum iaculis eu non diam.
-                    Justo eget magna fermentum iaculis eu non diam.  
+                    Experience the joy of worship in our uplifting
+                     services where the Word of God is proclaimed with
+                     passion, and the presence of the Holy Spirit is palpable.
+                     Beyond the sanctuary, discover the warmth of genuine fellowship 
+                    through our community events, small groups, and outreach programs.
                     <img alt='' className='thumb'/>
                     </p>
                 </div>
