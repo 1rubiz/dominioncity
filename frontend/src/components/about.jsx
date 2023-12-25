@@ -16,7 +16,7 @@ export default function About(){
                 style={{boxShadow: 'rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px'}}
             >
                 <h1 className='flex justify-center items-center gap-3 bg-[#427D9D] text-[3vh] text-white font-semibold font-serif'>WELCOME</h1>
-                <p>
+                <p className="text-center">
                   Welcome to Chapel of Dominion ministries digital space; we are a community bound by the
                  love of Christ and dedicated to sharing His message of hope, grace, and
                  redemption. Nestled in the heart of OGIDA QUARTERS, BENIN CITY, our church family extends a heartfelt
@@ -61,7 +61,7 @@ export default function About(){
                   style={{boxShadow: 'rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px'}}
                 >
                     <h1 className='flex justify-center items-center gap-3 bg-[#427D9D] text-[3vh] text-white font-semibold font-serif'>ABOUT US</h1>
-                    <p>
+                    <p className="text-center">
                     Experience the joy of worship in our uplifting
                      services where the Word of God is proclaimed with
                      passion, and the presence of the Holy Spirit is palpable.
