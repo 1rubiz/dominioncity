@@ -200,7 +200,7 @@ function Payments() {
       //   </div>
       // </div>  
   return (
-    <div className='h-screen flex flex-col-reverse gap-5'>
+    <div className='max-h-screen pt-[25vh] min-h-[70vh] flex flex-col-reverse gap-5 md:gap-6'>
     {/*  <motion.img 
         initial={{ opacity: 0 }}
         animate={{ opacity: 1}}
@@ -212,7 +212,7 @@ function Payments() {
       <motion.div
       initial={{opacity: 0, y: -100}}
       animate={{opacity: 1, y: 0}}
-      transition={{duration: 4}}
+      transition={{duration: 2}}
       className='h-[290px] md:h-[300px] top-[25vh] w-[88%] z-3 md:absolute ml-[6%] flex justify-center items-center lg:right-16 md:w-[40%] md:right-[10vh]'
       style={{boxShadow: 'rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px'}}
       >
@@ -220,7 +220,7 @@ function Payments() {
         className='w-[80%]'
         >
         <input
-        className='p-3 w-[100%] h-[6vh] mb-2 text-[16px]'
+        className='p-3 w-[100%] h-[6vh] md:h-[3vh] lg:h-[6vh] mb-2 text-[16px]'
         placeholder="FULL NAME"
         type="text"
         id="name"
@@ -228,7 +228,7 @@ function Payments() {
         style={{boxShadow: 'rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px'}}
         />
         <input
-        className='p-3 w-[100%] h-[6vh] mb-2'
+        className='p-3 w-[100%] h-[6vh] md:h-[3vh] lg:h-[6vh] mb-2'
         placeholder="EMAIL ADDRESS"
         type="text"
         id="email"
@@ -236,14 +236,14 @@ function Payments() {
         style={{boxShadow: 'rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px'}}
         />
         <input
-          className='p-3 w-[100%] h-[6vh] mb-2'
+          className='p-3 w-[100%] h-[6vh] md:h-[3vh] lg:h-[6vh] mb-2'
           placeholder="PHONE NUMBER"
           type="number"
           id="phone"
           onChange={(e) => {setPhone(e.target.value); setErrs('')}}
         />
         <input
-          className='p-3 w-[100%] h-[6vh] mb-2'
+          className='p-3 w-[100%] h-[6vh] md:h-[3vh] lg:h-[6vh] mb-2'
           placeholder="AMOUNT"
           type="number"
           id="amount"
@@ -265,8 +265,8 @@ function Payments() {
             <motion.div
       initial={{opacity: 0, y: -100}}
       animate={{opacity: 1, y: 0}}
-      transition={{duration: 4}}
-      className=' h-[150px] md:h-[300px] md:top-[25vh] w-[88%] z-3 md:absolute ml-[6%] flex justify-center items-center lg:left-0 md:w-[40%]'
+      transition={{duration: 2}}
+      className='h-[150px] md:h-[300px] md:top-[25vh] w-[88%] z-3 md:absolute ml-[6%] flex justify-center items-center lg:left-0 md:w-[40%]'
       style={{boxShadow: 'rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px'}}
       >
         <div

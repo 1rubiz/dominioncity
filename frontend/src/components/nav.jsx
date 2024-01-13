@@ -82,7 +82,7 @@ function Nav() {
             <div className="flex items-center">
               <div className="flex-shrink-0">
                 <Link to='/'><img
-                  className="h-[13vh] w-[30vh] bg-white md:mt-[9vh] lg:mt-[8vh]"
+                  className="h-[10vh] lg:h-[13vh] w-[28vh] lg:w-[30vh] bg-white md:mt-[9vh] lg:mt-[8vh]"
                   src={logo}
                   alt="Workflow"
                 /></Link>

@@ -3,7 +3,7 @@ import axios from 'axios'
 import Loading from './loading'
 
 export default function Youtube(){
-	const [videos, setVideos] = useState(null)
+	const [videos, setVideos] = useState([])
 	const [loading, setLoading] = useState(true);
 	useEffect(()=>{
 		const apiKey = 'AIzaSyDkAd2LHSJ5glxKF5M8JD5ieeY_YgFJDBs'
@@ -23,7 +23,7 @@ export default function Youtube(){
 			  method: 'GET',
 			  url: 'https://youtube138.p.rapidapi.com/channel/videos/',
 			  params: {
-			    id: 'UCJ5v_MCY6GNUBTO8-D3XoAg',
+			    id: 'UC-GI_d8SJaY_Su0TU87k6Vw',
 			    hl: 'en',
 			    gl: 'US'
 			  },
@@ -35,7 +35,7 @@ export default function Youtube(){
 
 			try {
 				const response = await axios.request(options);
-				// console.log(response.data);
+				console.log(response.data);
 				setVideos(response.data.contents)
 			} catch (error) {
 				console.error(error);
@@ -53,7 +53,7 @@ export default function Youtube(){
  		}
       <h1 className='text-white text-center font-sans'>YouTube Channel Videos</h1>
       <ul className='w-[100%] pb-9 flex flex-col gap-2 justify-center items-center md:grid md:grid-cols-3 md:gap-2'>
-        {videos && videos.map(video => (
+        {(videos.length > 0) ? (videos.map(video => (
           <li key={video.video.videoId} className='p-1 m-1'>
             <iframe
               title={video.video.title}
@@ -65,7 +65,10 @@ export default function Youtube(){
             ></iframe>
             <p className='text-[2vh] text-white'>{video.video.title}</p>
           </li>
-        ))}
+        ))) : (
+        <div className='flex items-center justify-center h-[8vh] w-[60%] bg-white opacity-80'><h3>No vidoes</h3></div>
+        )
+      }
       </ul>
     </div>
 	)

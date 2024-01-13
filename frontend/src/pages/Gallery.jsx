@@ -28,7 +28,7 @@ function Gallery() {
             console.log(data)
             if(error){ setErrs('Error loading images.....Try refreshing')}
             if(data.length > 0){
-              console.log(data)
+              // console.log(data)
               if(data[0].name[0] === '.'){
                 setImages(null)
                 setErrs('No New Images....')  
@@ -46,7 +46,7 @@ function Gallery() {
       getImages()
   }, [])
   return (
-    <div className='pl-8 w-[100%] pb-9 flex flex-col gap-2 justify-center items-center pt-[25vh] pb-4 md:grid md:grid-cols-3 md:gap-2 bg-[#164863]'>
+    <div className='pl-8 w-[100%] pb-9 flex flex-col gap-2 justify-center items-center pt-[25vh] pb-4 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-2 bg-[#164863]'>
       {
         loading && <Loading/>
       }

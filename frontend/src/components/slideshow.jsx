@@ -7,7 +7,7 @@ export default function Slideshow(){
   const supabaseUrl = import.meta.env.VITE_PUBLIC_SUPABASE_URL;
   const supabaseKey = import.meta.env.VITE_PUBLIC_SUPABASE_KEY;
   const supabase = createClient(supabaseUrl, supabaseKey);
-  const CDNURL = import.meta.env.VITE_CDNURL;
+  const CDNURL = import.meta.env.VITE_CAROUSELURL;
 
     const [errs, setErrs]= useState('')
   const [loading, setLoading] = useState(false);
@@ -31,7 +31,7 @@ export default function Slideshow(){
                   return;
                 }else{
                   data.map((item)=>{
-                    console.log(item)
+                    // console.log(item)
                       const newItem = `${CDNURL}${item.name}`; // You can replace this with the actual item you want to add
                       setImages(prevArray => [...prevArray, newItem]);
                   })
