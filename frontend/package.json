@@ -13,7 +13,7 @@
     "@clerk/clerk-react": "^4.28.0",
     "@emailjs/browser": "^3.11.0",
     "@supabase/supabase-js": "^2.38.4",
-    "axios": "^1.6.2",
+    "axios": "^1.6.7",
     "framer-motion": "^10.16.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

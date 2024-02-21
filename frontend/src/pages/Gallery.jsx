@@ -25,7 +25,6 @@ function Gallery() {
               offset: 0,
               sortBy: { column: 'name', order: 'asc' },
             })
-            console.log(data)
             if(error){ setErrs('Error loading images.....Try refreshing')}
             if(data.length > 0){
               // console.log(data)

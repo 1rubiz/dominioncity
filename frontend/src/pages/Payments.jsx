@@ -1,135 +1,3 @@
-// import React from 'react'
-// import { useState } from 'react'
-// import { useNavigate } from 'react-router-dom'
-
-// function Payments() {
-//   const publicKey = "pk_test_32b249e416818f500de8009ac50e29976a45cab8"
-//   // const amount = 924
-//   const [email, setEmail] = useState("")
-//   const [name, setName] = useState("")
-//   const [phone, setPhone] = useState("")
-//   const [amount, setAmount] = useState("")
-
-//   const [offering, setOfferings] = useState(true);
-//   const [tithe, setTithes] = useState(true);
-//   const [donation, setDonations] = useState(true);
-
-
-//   const handleSubmit = ()=>{
-//     console.log({email, name, phone, amount});
-//   }
-//   const toggleOffering = () => {
-//     setOfferings(!offering);
-//     setTithes(true);
-//     setDonations(true);
-//   };
-
-//   const toggleTithe = () => {
-//     setTithes(!tithe);
-//     setDonations(true);
-//     setOfferings(true);
-//   };
-
-//   const toggleDeonation = () => {
-//     setDonations(!donation);
-//     setTithes(true);
-//     setOfferings(true);
-//   };
-
-//   const navigate = useNavigate();
-//   const success =async ()=>{
-//     // await axios.post("http://localhost:3001/mail",body)
-//     navigate('/');
-//   }
-
-//   const componentProps = {
-//     email,
-//     amount,
-//     metadata: {
-//       name,
-//       phone,
-//     },
-//     publicKey,
-//     text: "Pay Now",
-//     onSuccess: () =>
-//       success(),
-//     onClose: () => alert("Wait! Don't leave :("),
-//   }
-
-  
-//   return (
-//     <div className='min-h-screen pt-9'>
-//       <div className='container'>
-//         <div className='card4'>
-//         <input
-//             placeholder="NAME"
-//               type="text"
-//               // id="name"
-//               onChange={(e) => setName(e.target.value)}
-//             />
-//             <input
-//             placeholder="EMAIL"
-//               type="email"
-//               // id="email"
-//               onChange={(e) => setEmail(e.target.value)}
-//             />
-//             <input
-//             placeholder="PHONE NUMBER"
-//               type="number"
-//               // id="phone"
-//               onChange={(e) => setPhone(e.target.value)}
-//             />
-//         </div>
-//         <div className='card3'>
-//           <h1 onClick={toggleOffering}>Give Offerings</h1>
-//           <div className=''>
-//           {!offering && <div>
-//             <input
-//             placeholder="Amount in Naira"
-//               type="number"
-//               onChange={(e) => setAmount(e.target.value)}
-//             />
-//             <button onClick={handleSubmit} className='btn'>Pay Now</button>
-//              {/* <PaystackButton {...componentProps} className='btn'/> */}
-//               </div>}
-//           </div>
-//         </div>
-//         <div className='card3'>
-//           <h1 onClick={toggleTithe}>Pay Tithe</h1>
-//           <div className=''>
-//           {!tithe && <div>
-//             <input
-//             placeholder="Amount in Naira"
-//               type="number"
-//               onChange={(e) => setAmount(e.target.value)}
-//             />
-//           <button onClick={handleSubmit} className='btn'>Pay Now</button>
-//           {/* <PaystackButton {...componentProps} className='btn'/> */}
-//               </div>}
-//           </div>
-//         </div>
-//         <div className='card3'>
-//           <h1 onClick={toggleDeonation}>Donations</h1>
-//           <div className=''>
-//           {!donation && <div>
-//             <input
-//             placeholder="Amount in Naira"
-//               type="number"
-//               onChange={(e) => setAmount(e.target.value)}
-//             />
-//             <button onClick={handleSubmit} className='btn'>Pay Now</button>
-//           {/* <PaystackButton {...componentProps} className='btn'/> */}
-//               </div>}
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//   )
-// }
-
-// export default Payments
-
-
 import { motion } from 'framer-motion'
 // import donate from '../assets/img1.jpg'
 import { FaCreditCard } from 'react-icons/fa'
@@ -152,7 +20,6 @@ function Payments() {
   const [choiceErr, setChoiceErr] = useState('')
   const navigate = useNavigate();
   const success =async ()=>{
-    // await axios.post("https://eclat-backend-server.onrender.com/mail",body)
     navigate('/');
   }
 
@@ -182,7 +49,7 @@ function Payments() {
       phone,
     },
     publicKey,
-    text: "Donate",
+    text: "Make Offerings",
     onSuccess: () =>
       success(),
     onClose: () => alert("Wait! Don't leave :("),
@@ -255,7 +122,7 @@ function Payments() {
         animate={{opacity: 1}}
         transition={{duration: 1}}
         >
-        <button className={`${(!email[0] || (amount < 1) || !name[0] || !phone[0]) ? 'block' : 'hidden'}`} onClick={handleClick}> Make Payments</button>
+        <button className={`${(!email[0] || (amount < 1) || !name[0] || !phone[0]) ? 'block text-gray-400' : 'hidden'}`} onClick={handleClick}> Make Offerings</button>
         <span className={`${(email[0] && (amount > 0) && name[0] && phone[0]) ? 'block' : 'hidden'}`}><PaystackButton {...componentProps} className={`${(email[0] !== null) ? 'block' : 'hidden'} btn`}/></span>
         <FaCreditCard/>
         </motion.li>

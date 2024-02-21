@@ -10,7 +10,7 @@ export default function Input({
   id,
   name,
   type,
-  isRequired = false,
+  isRequired = true,
   placeholder,
   customClass,
 }) {
