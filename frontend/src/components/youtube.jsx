@@ -26,7 +26,6 @@ useEffect(() => {
 			console.log(error)
 		})
 		setLoading(false)
-		// console.log(posts); 
 },[])
 
 return(
@@ -35,7 +34,7 @@ return(
 				loading && <Loading/>
 			}
 		 <h1 className='text-white text-center font-sans'>YouTube Videos</h1>
-		 <ul className='w-[100%] pb-9 flex flex-col gap-2 justify-center items-center md:grid md:grid-cols-3 md:gap-2'>
+		 <ul className='w-[100%] pb-9 flex flex-col gap-2 justify-center items-center md:grid md:grid-cols-3 md:gap-4'>
 		   {(videos.length > 0) ? (videos.map(video => (
 			 <li key={video.id.videoId} className='p-1 m-1'>
 			   <iframe
@@ -56,5 +55,4 @@ return(
 	   </div>
 	   )
 };
-// {video.id.videoId}`}>{video.snippet.title}
 export default Youtube;

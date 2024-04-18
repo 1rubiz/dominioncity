@@ -1,6 +1,4 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import {Routes, Route, BrowserRouter} from 'react-router-dom'
 import Nav from './components/nav'
@@ -16,8 +14,9 @@ function App() {
 
   return (
      <BrowserRouter>
-      <div className='bg-[#164863] h-screen'>
+      <div className='bg-[#164863] max-h-screen lg:overflow-hidden lg:flex'>
         <Nav/>
+        <div className='lg:w-[70%] lg:max-h-screen lg:overflow-x-hidden'>
         <Routes>
           <Route path='/' element={<Landing/>}/>
           <Route path='/gallery' element={<Gallery/>}/>
@@ -26,6 +25,7 @@ function App() {
           <Route path='/media' element={<Media/>}/>
         </Routes>
         <Footer/>
+        </div>
       </div>
     </BrowserRouter>
 

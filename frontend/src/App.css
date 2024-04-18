@@ -10,6 +10,16 @@
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
+.thumbnail {
+  background: url('/firstbank.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.thumbnail2 {
+  background: url('/zenithbank.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 @keyframes logo-spin {
   from {

@@ -16,9 +16,6 @@ export default function Input({
 }) {
   return (
     <div className="my-3">
-      <label htmlFor={labelFor} className="sr-only">
-        {labelText}
-      </label>
       <input
         onClick={handleClick}
         onChange={handleChange}

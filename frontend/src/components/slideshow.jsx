@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import {motion} from 'framer-motion'
 import { createClient } from "@supabase/supabase-js";
-import Loading from './loading'
+// import Loading from './loading'
 
 export default function Slideshow(){
   const supabaseUrl = import.meta.env.VITE_PUBLIC_SUPABASE_URL;
@@ -31,8 +31,7 @@ export default function Slideshow(){
                   return;
                 }else{
                   data.map((item)=>{
-                    // console.log(item)
-                      const newItem = `${CDNURL}${item.name}`; // You can replace this with the actual item you want to add
+                      const newItem = `${CDNURL}${item.name}`;
                       setImages(prevArray => [...prevArray, newItem]);
                   })
                   setErrs('')

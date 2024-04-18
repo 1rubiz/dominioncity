@@ -10,7 +10,7 @@ function Image({image, customClass}) {
         <img
         src={`${CDNURL}${image}`}
         alt=''
-        className={`${customClass} w-full h-[500px] md:h-[300px] object-cover transition-transform transform scale-100 hover:scale-125`}
+        className={`${customClass} w-full h-auto md:h-[300px] object-contain transition-transform transform scale-100 hover:scale-125`}
         />
     </div>
   )

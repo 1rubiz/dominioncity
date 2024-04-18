@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import { FaFacebook, FaRobot, FaGlobe, FaAngleDown, FaInstagram, FaTwitter, FaWhatsapp, FaLinkedin, FaShare } from 'react-icons/fa'
+import { FaGlobe, FaAngleDown, FaInstagram, FaWhatsapp, FaYoutube, FaShare } from 'react-icons/fa'
 import { motion } from 'framer-motion';
 import FooterInfo from './footerInfo'
 
@@ -64,7 +64,7 @@ function Footer() {
       exit={{ opacity: 0 }}
       transition={{duration: 2}}
       >
-        <FaLinkedin className='text-[#0D1321] hover:text-[3.6vh] hover:text-[blue] text-[3.9vh]'/>
+        <FaYoutube className='text-[#0D1321] hover:text-[3.6vh] hover:text-[blue] text-[3.9vh]'/>
       </motion.div>
       
       <motion.div

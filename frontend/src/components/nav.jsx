@@ -1,10 +1,10 @@
 import React from 'react'
 import { useState } from 'react';
+import { FaHome, FaCamera, FaMoneyBill, FaImages } from 'react-icons/fa';
 import { IoCloseOutline } from 'react-icons/io5';
 import { FaBars } from 'react-icons/fa';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
-// import logo from '../assets/logo.png';
 import logo from '/logo.png'
 
 function Nav() {
@@ -14,8 +14,8 @@ function Nav() {
     }
 
   return (
-    <>
-    <div className='bg-white h-[17.7vh] w-[100%] flex fixed top-0 left-0 z-10 w-[100%] md:hidden'>
+    <div className='lg:w-[30%] bg-red-800 lg:h-screen lg:max-h-screen lg:overflow-y-hidden lg:bg-white'>
+    <div className='bg-white h-[17.7vh] flex fixed top-0 left-0 z-10 w-[100%] md:hidden'>
        <Link to='/'> <motion.img 
             src={logo}
             className='w-[30vh] h-[15vh] mt-4 ml-8 mix-blend-multiply'
@@ -25,7 +25,6 @@ function Nav() {
         /></Link>
         <motion.div 
             className='absolute top-[5vh] right-9'
-            // initial={{y: 0}}
         >
         {nav ? (
             <IoCloseOutline className='h-[6vh] w-[4.7vh] text-[#164863]' onClick={handleNav}/>
@@ -39,7 +38,6 @@ function Nav() {
                 <motion.div className='absolute bg-[white] p-9 top-[9.7vh] right-0 z-10'
                     initial={{opacity: 0}}
                     animate={{opacity: 1}}
-                    transition={{duration: 1}}
                     exit={{ opacity: 0 }}
                     >
                     <div className='list-none text-[14px] w-[100%] flex flex-col gap-8 font-bold text-[white]'>
@@ -76,54 +74,59 @@ function Nav() {
         }
         </AnimatePresence>
     </div>
-    <nav className="bg-white h-[16.4vh] w-[100%] fixed top-0 left-0 z-10 transparent hidden md:block">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16">
-            <div className="flex items-center">
-              <div className="flex-shrink-0">
+    <nav className="bg-white hidden lg:block ">
+          <div className="h-screen">
+            <div className="w-[100%] h-[100%]">
+              <div className="flex justify-center items-center w-[100%] mb-[2vh]">
                 <Link to='/'><img
-                  className="h-[10vh] lg:h-[13vh] w-[28vh] lg:w-[30vh] bg-white md:mt-[9vh] lg:mt-[8vh]"
+                  className="h-[10vh] lg:h-[17vh] w-[28vh] lg:w-[40vh] bg-white md:mt-[9vh] lg:mt-[5vh]"
                   src={logo}
                   alt="Workflow"
                 /></Link>
               </div>
-              <div className="hidden md:block">
-                <div className="ml-10 mt-[9vh] flex items-baseline space-x-4">
-                  <a
+              <div className="hidden md:block w-[100%] h-[100%] bg-black">
+                <div className="flex flex-col items-baseline">
+                  <div className='w-[100%] p-2 hover:bg-[#164863]'><a
                     href="/"
-                    className=" hover:bg-gray-700 hover:text-white border-b-2 border-[#164863]  px-3 py-2 rounded-md text-sm font-medium"
+                    className=" text-white flex items-center gap-6 border-b-2 border-[#164863]  px-3 py-2 rounded-md text-[3.5vh] font-serif font-medium"
                   >
-                    HOME
+                    HOME <FaHome/>
                   </a>
+                  </div>
 
+                  <div className='w-[100%] p-2 hover:bg-[#164863]'>
                   <a
                     href="/media"
-                    className=" hover:bg-gray-700 hover:text-white border-b-2 border-[#164863] px-3 py-2 rounded-md text-sm font-medium"
+                    className=" text-white flex items-center gap-6 border-b-2 border-[#164863] px-3 py-2 rounded-md text-[3.5vh] font-serif font-medium"
                   >
-                    MEDIA
+                    MEDIA <FaCamera/>
                   </a>
+                  </div>
 
+                  <div className='w-[100%] p-2 hover:bg-[#164863]'>
                   <a
                     href="/offering"
-                    className=" hover:bg-gray-700 hover:text-white border-b-2 border-[#164863] px-3 py-2 rounded-md text-sm font-medium"
+                    className=" text-white flex items-center gap-6 border-b-2 border-[#164863] px-3 py-2 rounded-md text-[3.5vh] font-serif font-medium"
                   >
-                    OFFERINGS
+                    OFFERINGS <FaMoneyBill/>
                   </a>
+                  </div>
 
+                  <div className='w-[100%] p-2 hover:bg-[#164863]'>
                   <a
                     href="/gallery"
-                    className=" hover:bg-gray-700 hover:text-white border-b-2 border-[#164863] px-3 py-2 rounded-md text-sm font-medium"
+                    className=" text-white flex items-center gap-6 border-b-2 border-[#164863] px-3 py-2 rounded-md text-[3.5vh] font-serif font-medium"
                   >
-                    GALLERY
+                    GALLERY <FaImages/>
                   </a>
+                  </div>
                 </div>
               </div>
             </div>
             
           </div>
-        </div>
       </nav>
-      </>
+      </div>
   )
 }
 

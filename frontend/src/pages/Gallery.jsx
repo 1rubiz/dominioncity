@@ -1,6 +1,5 @@
 import React, { useState, useEffect} from 'react'
 import Image from '../components/image'
-// import img from '/2.png';
 import { createClient } from "@supabase/supabase-js";
 import Loading from '../components/loading'
 
@@ -45,7 +44,7 @@ function Gallery() {
       getImages()
   }, [])
   return (
-    <div className='pl-8 w-[100%] pb-9 flex flex-col gap-2 justify-center items-center pt-[25vh] pb-4 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-2 bg-[#164863]'>
+    <div className='relative pl-8 w-[100%] pb-9 flex flex-col gap-2 justify-center items-center pt-[25vh] md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-2 bg-[#164863]'>
       {
         loading && <Loading/>
       }

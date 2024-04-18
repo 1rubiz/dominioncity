@@ -5,8 +5,7 @@ import Form from './form'
 
 function FooterInfo() {
   return (
-    <footer className='bg-[black] text-[#9BBEC8] pb-12 flex flex-col lg:flex-row gap-6 items-center'>
-        
+    <footer className='bg-[black] text-[#9BBEC8] pb-12 lg:pb-[6.3vh] lg:pt-10 flex flex-col lg:flex-row gap-6 items-center'>
         <div className='w-[80%] md:w-[48%] md:p-6'>
             <Form/>
         </div>

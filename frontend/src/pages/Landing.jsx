@@ -8,12 +8,7 @@ import { FaAngleUp, FaAngleDown } from 'react-icons/fa';
 export default function Landing(){
 	const [display, setDisplay] = useState(false);
 	const [loading, setLoading] = useState(true);
-	const images = [
-			'/img.JPG',
-			'/img2.JPG',
-			'/img3.JPG',
-			'/logo.jpg'
-		]
+	
 	const handleDays = ()=>{
 		setDisplay(!display)
 	}
@@ -26,7 +21,7 @@ export default function Landing(){
 	const button = !display ? (<FaAngleUp/>) : (<FaAngleDown/>);
 
 	 return (
-	    <div className='pt-[17vh] md:pt-[12vh] max-w-[100%] overflow-hidden'>
+	    <div className='relative pt-[17vh] lg:pt-1 md:pt-[12vh] max-w-[100%]'>
 	    	{
 	    		loading && <Loading/>
 	    	}
