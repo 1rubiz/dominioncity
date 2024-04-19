@@ -15,7 +15,7 @@ function Nav() {
 
   return (
     <div className='lg:w-[30%] bg-red-800 lg:h-screen lg:max-h-screen lg:overflow-y-hidden lg:bg-white'>
-    <div className='bg-white h-[17.7vh] flex fixed top-0 left-0 z-10 w-[100%] md:hidden'>
+    <div className='bg-white h-[17.7vh] flex fixed top-0 left-0 z-10 w-[100%] lg:hidden'>
        <Link to='/'> <motion.img 
             src={logo}
             className='w-[30vh] h-[15vh] mt-4 ml-8 mix-blend-multiply'
@@ -24,7 +24,7 @@ function Nav() {
             transition={{duration: 1}}
         /></Link>
         <motion.div 
-            className='absolute top-[5vh] right-9'
+            className='absolute top-[5vh] z-[50] right-9'
         >
         {nav ? (
             <IoCloseOutline className='h-[6vh] w-[4.7vh] text-[#164863]' onClick={handleNav}/>

@@ -11,7 +11,7 @@ export default function Media(){
 		}, 2000)
 	}, [])
 	return(
-		<div className='relative text-[6vh] bg-[#164863]'>
+		<div className='relative text-[6vh] bg-[#164863] pt-[17vh]'>
 			{
 			loading && <Loading/>
 	    	}

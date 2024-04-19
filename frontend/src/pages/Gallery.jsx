@@ -2,6 +2,7 @@ import React, { useState, useEffect} from 'react'
 import Image from '../components/image'
 import { createClient } from "@supabase/supabase-js";
 import Loading from '../components/loading'
+import toast from 'react-hot-toast';
 
 function Gallery() {
   const supabaseUrl = import.meta.env.VITE_PUBLIC_SUPABASE_URL;
@@ -24,7 +25,12 @@ function Gallery() {
               offset: 0,
               sortBy: { column: 'name', order: 'asc' },
             })
-            if(error){ setErrs('Error loading images.....Try refreshing')}
+            if(error){ 
+              setErrs('Error loading images.....Try refreshing')
+              console.log(error);
+              // setLoading(false)
+              toast.error('Network error')
+            }
             if(data.length > 0){
               // console.log(data)
               if(data[0].name[0] === '.'){

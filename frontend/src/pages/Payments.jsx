@@ -30,7 +30,7 @@ function Payments() {
           <div className='bg-white w-[90%] md:w-[40%]'>
             <p className='text-center text-[3vh] font-bold font-serif'>Tithe & Offering</p>
             <div className='relative w-[100%] h-[40svh] bg-black'>
-              <div className='thumbnail w-[100%] h-[70%]'>
+              <div className='thumbnail w-[100%] h-[70%] opacity-20'>
 
               </div>
               <div className='absolute bottom-2 text-[2.2vh] pl-2 font-medium text-white'>
@@ -38,7 +38,7 @@ function Payments() {
                 <p>Account Name - Dominion Chapel</p>
                 <span className='flex items-center gap-6 font-bold'>
                 Account No - 123456789012  
-                <FaCopy onClick={()=>copy(1234567)} className='text-[3vh]'/>
+                <FaCopy onClick={()=>copy(1234567)} className='hover:text-[3.5vh] text-[3vh]'/>
                 </span>
               </div>
             </div>
@@ -47,14 +47,14 @@ function Payments() {
           <div className='bg-white w-[90%] md:w-[40%]'>
             <p className='text-center text-[3vh] font-bold font-serif'>Donations</p>
             <div className='relative w-[100%] h-[40svh] bg-black'>
-              <div className='thumbnail2 w-[100%] h-[70%]'>
+              <div className='thumbnail2 w-[100%] h-[70%] opacity-20'>
               </div>
               <div className='absolute bottom-2 text-[2.2vh] pl-2 font-medium text-white'>
                 <span className='font-serif font-bold'>Zenieth bank</span>
                 <p>Account Name - Dominion Chapel</p>
                 <span className='flex items-center gap-6 font-bold'>
                 Account No - 123456789012  
-                <FaCopy onClick={()=>copy(1234567)} className='text-[3vh]'/>
+                <FaCopy onClick={()=>copy(1234567)} className='hover:text-[3.5vh] text-[3vh]'/>
                 </span>
               </div>
             </div>
