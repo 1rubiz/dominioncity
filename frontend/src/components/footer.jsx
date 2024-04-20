@@ -64,7 +64,7 @@ function Footer() {
       exit={{ opacity: 0 }}
       transition={{duration: 2}}
       >
-        <FaYoutube className='text-[#0D1321] hover:text-[3.6vh] hover:text-[blue] text-[3.9vh]'/>
+        <a href='http://www.youtube.com/@Dominionchapel-wb5we'><FaYoutube className='text-[#0D1321] hover:text-[3.6vh] hover:text-[blue] text-[3.9vh]'/></a>
       </motion.div>
       
       <motion.div
@@ -73,7 +73,7 @@ function Footer() {
       exit={{ opacity: 0 }}
       transition={{duration: 2}}
       >
-      <a href={import.meta.env.VITE_WHATSAPP}>  <FaWhatsapp className='text-[#0D1321] hover:text-[3.6vh] hover:text-[blue] text-[3.9vh]'/></a>
+      <a href='https://wa.link/xhvr52'>  <FaWhatsapp className='text-[#0D1321] hover:text-[3.6vh] hover:text-[blue] text-[3.9vh]'/></a>
       </motion.div>
      
       </>
@@ -86,22 +86,3 @@ function Footer() {
 }
 
 export default Footer
-
-
-//// <motion.div
-//       initial={{y: 40}}
-//       animate={{y: 0}}
-//       exit={{ opacity: 0 }}
-//       transition={{duration: 2}}
-//       >
-//         <FaTwitter className='text-[#0D1321] hover:text-[3.6vh] hover:text-[blue] text-[3vh]'/>
-//       </motion.div>
-
-      //  <motion.div
-      // initial={{y: 70}}
-      // animate={{y: 0}}
-      // exit={{ opacity: 0 }}
-      // transition={{duration: 2}}
-      // >
-      //           <FaFacebook className='text-[#0D1321] hover:text-[3.6vh] hover:text-[blue] text-[3vh]'/>
-      // </motion.div>

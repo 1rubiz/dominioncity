@@ -15,15 +15,15 @@ function FooterInfo() {
                 <FaMapMarkerAlt/> 48, OKUNGBOWA STREET, OFF SILUKO ROAD, OGIDA QUARTERS BENIN CITY.
                 </p>
                 <p className='flex items-center gap-3'>
-                    <AiFillMail/> abcedfg@gmail.com
+                    <AiFillMail/> chapelofdominion2@gmail.com
                 </p>
                 <p className='flex items-center gap-3'>
-                    <AiFillPhone/> +123-456-789-0
+                    <AiFillPhone/> +234 806 134 1918
                 </p>
             </div>
             <div className=''>
                 <p className='flex items-center gap-3'>Copyright <AiFillCopyrightCircle/> Chapel of Dominion </p>
-                <p>Designed & Developed By Rubiz Creation</p>
+                <a href='https://1izekorruby.wixsite.com/my-site'><p>Designed & Developed By Rubiz Creation</p></a>
             </div>
         </div>
     </footer>
