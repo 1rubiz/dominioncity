@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 export default function About(){
 	const cards = 'p-6 rounded-[20px] m-2'
 	return(
-		<div className='p-2 bg-[#164863] text-[#9BBEC8] flex flex-col justify-center items-center'>
+		<div className='p-2 bg-[#164863] text-[white] flex flex-col justify-center items-center'>
             <motion.div
               initial={{opacity: 0}}
               whileInView={{opacity: 2}}
