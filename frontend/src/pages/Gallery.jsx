@@ -25,7 +25,7 @@ function Gallery() {
               offset: 0,
               sortBy: { column: 'name', order: 'asc' },
             })
-            if(error){ 
+            if(error){
               setErrs('Error loading images.....Try refreshing')
               console.log(error);
               // setLoading(false)
@@ -35,7 +35,7 @@ function Gallery() {
               // console.log(data)
               if(data[0].name[0] === '.'){
                 setImages(null)
-                setErrs('No New Images....')  
+                setErrs('No New Images....')
                 setLoading(false)
               }else{
                 setImages(data);

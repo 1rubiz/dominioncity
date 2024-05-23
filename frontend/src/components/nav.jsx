@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState } from 'react';
-import { FaHome, FaCamera, FaMoneyBill, FaImages } from 'react-icons/fa';
+import { FaHome, FaCamera, FaMoneyBill, FaImages, FaYoutube } from 'react-icons/fa';
 import { IoCloseOutline } from 'react-icons/io5';
 import { FaBars } from 'react-icons/fa';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -15,66 +15,45 @@ function Nav() {
 
   return (
     <div className='lg:w-[30%] bg-red-800 lg:h-screen lg:max-h-screen lg:overflow-y-hidden lg:bg-white'>
-    <div className='bg-white h-[17.7vh] flex fixed top-0 left-0 z-10 w-[100%] lg:hidden'>
-       <Link to='/'> <motion.img 
-            src={logo}
-            className='w-[30vh] h-[15vh] mt-4 ml-8 mix-blend-multiply'
-            initial={{y: -30}}
-            animate={{y: 0}}
-            transition={{duration: 1}}
-        /></Link>
-        <motion.div 
-            className='absolute top-[5vh] z-[50] right-9'
-        >
-        {nav ? (
-            <IoCloseOutline className='h-[6vh] w-[4.7vh] text-[#164863]' onClick={handleNav}/>
-        ) : (
-            <FaBars className='h-[6vh] w-[3vh] text-[#164863]' onClick={handleNav}/>
-        )}
-        </motion.div>
-        <AnimatePresence>
-        {
-            nav && (
-                <motion.div className='absolute bg-[white] p-9 top-[9.7vh] right-0 z-10'
+    <div className='w-[100%] md:hidden'>
+                <motion.div className='hover:opacity-30 opacity-80 fixed bg-[black] w-full h-[9svh] p-3 bottom-0 left-0 z-[20]'
                     initial={{opacity: 0}}
                     animate={{opacity: 1}}
                     exit={{ opacity: 0 }}
                     >
-                    <div className='list-none text-[14px] w-[100%] flex flex-col gap-8 font-bold text-[white]'>
+                    <div className='list-none text-[19px] w-[100%] opacity-50 hover:opacity-90 flex justify-between items-center gap-5 pr-5 pl-5 font-bold text-[white]'>
                     <Link to='/'><motion.li className='p-2 bg-[#164863] rounded-[9px]'
                             initial={{x: 30}}
                             animate={{x: 0}}
                             transition={{duration: 1}}
                             onClick={handleNav}
-                        >HOME</motion.li></Link>
+                        ><FaHome/></motion.li></Link>
                        <Link to='/media'> <motion.li
                             className='p-2 bg-[#164863] rounded-[9px]'
                             initial={{x: 30}}
                             animate={{x: 0}}
                             transition={{duration: 1}}
                             onClick={handleNav}
-                        >MEDIA</motion.li></Link>
+                        ><FaYoutube/></motion.li></Link>
                         <Link to='/offering'><motion.li
                             className='p-2 bg-[#164863] rounded-[9px]'
                             initial={{x: 30}}
                             animate={{x: 0}}
                             transition={{duration: 1}}
                             onClick={handleNav}
-                        >OFFERINGS</motion.li></Link>
+                        ><FaMoneyBill/></motion.li></Link>
                         <Link to='/gallery'> <motion.li
                             className='p-2 bg-[#164863] rounded-[9px]'
-                            initial={{x: 30}}
+                            initial={{x: 0}}
                             animate={{x: 0}}
                             transition={{duration: 1}}
                             onClick={handleNav}
-                        >GALLERY</motion.li></Link>
+                        ><FaImages/></motion.li></Link>
                     </div>
                 </motion.div>
-            )
-        }
-        </AnimatePresence>
+
     </div>
-    <nav className="bg-white hidden lg:block ">
+    <nav className="bg-white hidden md:block ">
           <div className="h-screen">
             <div className="w-[100%] h-[100%]">
               <div className="flex justify-center items-center w-[100%] mb-[2vh]">
@@ -123,7 +102,7 @@ function Nav() {
                 </div>
               </div>
             </div>
-            
+
           </div>
       </nav>
       </div>
@@ -131,3 +110,32 @@ function Nav() {
 }
 
 export default Nav
+
+//
+// <Link to='/'> <motion.img
+//      src={logo}
+//      className='w-[30vh] h-[15vh] mt-4 ml-8 hidden mix-blend-multiply'
+//      initial={{y: -30}}
+//      animate={{y: 0}}
+//      transition={{duration: 1}}
+//  /></Link>
+//  <motion.div
+//      className='absolute top-[5vh] z-[50] right-9'
+//  >
+//  {nav ? (
+//      <IoCloseOutline className='h-[6vh] hidden w-[4.7vh] text-[#164863]' onClick={handleNav}/>
+//  ) : (
+//      <FaBars className='h-[6vh] w-[3vh] hidden text-[#164863]' onClick={handleNav}/>
+//  )}
+//  </motion.div>
+//  <AnimatePresence>
+//  {
+//      !nav && (
+
+
+
+
+//
+// )
+// }
+// </AnimatePresence>

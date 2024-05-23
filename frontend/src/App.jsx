@@ -14,9 +14,9 @@ function App() {
 
   return (
      <BrowserRouter>
-      <div className='bg-[#164863] max-h-screen lg:overflow-hidden lg:flex'>
+      <div className='bg-[#164863] max-h-screen md:overflow-hidden md:flex'>
         <Nav/>
-        <div className='lg:w-[70%] lg:max-h-screen lg:overflow-x-hidden'>
+        <div className='md:w-full md:max-h-screen md:overflow-x-hidden'>
         <Routes>
           <Route path='/' element={<Landing/>}/>
           <Route path='/gallery' element={<Gallery/>}/>

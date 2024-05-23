@@ -21,7 +21,7 @@ useEffect(() => {
 		.then((res) => {
 			let data = res.data.items;
 			data.shift();
-			setVideos(data)        
+			setVideos(data)
 		})
 		.catch((error) => {
 			toast.error(error.message)
@@ -35,24 +35,23 @@ return(
 				loading && <Loading/>
 			}
 		 <h1 className='text-white text-center font-sans'>YouTube Videos</h1>
-		 <ul className='relative min-h-[12vh] w-[100%] pb-9 flex flex-col gap-2 justify-center items-center md:grid md:grid-cols-3 md:gap-4'>
+		 <div className='relative min-h-[12vh] w-full pb-9 flex flex-col gap-2 justify-center items-center md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-4'>
 		   {(videos.length > 0) ? (videos.map(video => (
-			 <li key={video.id.videoId} className='p-1 m-1'>
+			 <div key={video.id.videoId} className='p-1 m-1 h-80 w-80 md:w-64 md:h-80'>
 			   <iframe
 				 title={video.snippet.title}
-				 width="335"
-				 height="315"
+				 className="h-full w-full"
 				 src={`https://www.youtube.com/embed/${video.id.videoId}`}
 				 frameBorder="0"
 				 allowFullScreen
 			   ></iframe>
 			   <p className='text-[2vh] text-white'>{video.snippet.title}</p>
-			 </li>
+			 </div>
 		   ))) : (
 		   <div className='absolute flex items-center justify-center h-[12vh] w-[100%] bg-white opacity-80'><h3>Oops.....No vidoes</h3></div>
 		   )
 		 }
-		 </ul>
+		 </div>
 	   </div>
 	   )
 };

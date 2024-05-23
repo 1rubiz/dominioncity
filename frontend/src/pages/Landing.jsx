@@ -8,7 +8,7 @@ import { FaAngleUp, FaAngleDown } from 'react-icons/fa';
 export default function Landing(){
 	const [display, setDisplay] = useState(false);
 	const [loading, setLoading] = useState(true);
-	
+
 	const handleDays = ()=>{
 		setDisplay(!display)
 	}
@@ -21,11 +21,11 @@ export default function Landing(){
 	const button = !display ? (<FaAngleUp/>) : (<FaAngleDown/>);
 
 	 return (
-	    <div className='relative pt-[17vh] lg:pt-1 md:pt-[12vh] max-w-[100%]'>
+	    <div className='relative lg:pt-1 md:pt-[12vh] max-w-[100%]'>
 	    	{
 	    		loading && <Loading/>
 	    	}
-	      <div className='relative m-[4%] w-[90%] h-[50vh]'> 
+	      <div className='relative ml-[4%] mr-[4%] w-[90%] h-[50vh]'>
 	      	<Slideshow/>
 	      </div>
 	      <div className='w-[100%] text-[black]' onClick={handleDays}>
@@ -33,8 +33,8 @@ export default function Landing(){
 	      	<Infinitystrip text='Sundays (Glorious service) 8am | Tuesday (Word@work service) 6:15am - 7:25am | Fridays (Divine Intervention Hour) 5pm - 6pm '/>
 	      	{
 	      		display && (
-	      				<div className='bg-white text-center flex flex-col gap-3'>
-					      	<p>Sundays (Glorious service) 8am</p>
+	      				<div className='bg-gray-300 text-center flex flex-col gap-3'>
+					      	<p>Sundays (Glorious service) 8am</p><hr className/>
 					      	<p>Tuesday (Word@work service) 6:15am - 7:25am</p>
 					      	<p>Fridays (Divine Intervention Hour) 5pm - 6pm</p>
 					      </div>
