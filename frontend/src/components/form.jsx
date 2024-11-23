@@ -48,7 +48,7 @@ const Form = () => {
       {
           loading && (<div className='fixed z-10 top-0 left-0 w-[100%] h-screen'><Loading/></div>)
         }
-      <div id='contact' className='text-[27px] flex justify-center items-center'>Co<span className='border-b-2 border-b-[orange]'>ntact U</span>s <FaMapMarkerAlt className='pl-3'/></div>
+      <div id='contact' className='text-[27px] flex justify-center items-center'>Co<span className='border-b-2 border-b-[#9B2915]'>ntact U</span>s <FaMapMarkerAlt className='pl-3'/></div>
         <motion.div 
           initial={{opacity: 0}}
           whileInView={{opacity: 2}}
@@ -58,7 +58,7 @@ const Form = () => {
             <form
               ref={form}
               onSubmit={sendEmail}
-              className='lg:block lg:w-[100%]'
+              className='w-full lg:block'
               >
                <Toaster/>
                 <Input 
@@ -80,9 +80,9 @@ const Form = () => {
                 name='message'
                 id='message'
                 placeholder='Email body....'
-                className='w-[100%] min-h-[15vh] pl-3 text-black border-2 border-white'
+                className='p-2 w-[100%] min-h-[15vh] pl-3 text-black border-2 border-white'
                 />
-              <button id='emailBtn' className='bg-[#3E5C76] hover:border-[white] font-bold text-[1.8vh] text-white hover:border-2 w-[25vh] lg:w-[45%] h-[5.5vh]'>Submit</button>
+              <button id='emailBtn' className='bg-[#3E5C76] hover:border-[white] font-bold text-[1.8vh] text-white hover:border-2 w-full h-[5.5vh]'>Submit</button>
           </form>
           </motion.div>
       </div>

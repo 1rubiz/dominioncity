@@ -1,5 +1,5 @@
 import { FaCopy } from 'react-icons/fa'
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import toast, { Toaster } from 'react-hot-toast';
 import Loading from '../components/loading'
 
@@ -21,44 +21,52 @@ function Payments() {
     }
   }
   return (
-    <div className='relative min-h-[70vh] bg-[#164863] pb-[10vh]'>
-        <Toaster/>
-        {
-	    		loading && <Loading/>
-	    	}
-        <div className='flex flex-col md:flex-row gap-6 justify-center items-center pt-[10vh] lg:pt-[10vh]'>
-          <div className='bg-white w-[90%] md:w-[50%]'>
-            <p className='text-center text-[3vh] font-bold font-serif'>Tithe & Offering</p>
-            <div className='relative w-[100%] h-[45svh] bg-black'>
-              <div className='thumbnail w-[100%] h-[70%] opacity-20'>
-              </div>
-              <div className='absolute bottom-2 text-[2.2vh] pl-2 font-medium text-white'>
-              <span className='font-serif font-bold'>UBA</span>
-                <p>Account Name - Chapel of Dominion Min. Inc</p>
-                <span className='flex items-center gap-6 font-bold'>
-                Account No - 1017409912
-                <FaCopy onClick={()=>copy(1234567)} className='hover:text-[3.5vh] text-[3vh]'/>
-                </span>
-              </div>
-            </div>
+    <div className='w-full relative min-h-[70vh] pt-24 pb-[10vh] px-4 lg:px-2 flex flex-col lg:flex-row gap-4 items-center flex-wrap'>
+      <Toaster/>
+      {
+        loading && <Loading/>
+      }
+      <div className='w-full'>
+        <h1 className='text-white text-3xl font-bold'>Offering</h1>
+      </div>
+      <div className="w-full max-w-md mx-auto bg-white shadow-lg rounded-xl overflow-hidden border border-gray-200">
+        {/* <!-- Card Header --> */}
+        <div className="flex items-center bg-gradient-to-r from-[#817F75] to-[#08090A] p-4">
+          <img
+            src="/UBA-logo-2.gif"
+            alt="Bank Logo"
+            className="w-12 h-12 rounded-full shadow-md"
+          />
+          <div className="ml-4 text-white">
+            <h3 className="text-lg font-semibold">Bank Name</h3>
+            <p className="text-sm font-light">Your Trusted Partner</p>
           </div>
-
-          {/* <div className='bg-white w-[90%] md:w-[40%]'>
-            <p className='text-center text-[3vh] font-bold font-serif'>Donations</p>
-            <div className='relative w-[100%] h-[40svh] bg-black'>
-              <div className='thumbnail2 w-[100%] h-[70%] opacity-20'>
-              </div>
-              <div className='absolute bottom-2 text-[2.2vh] pl-2 font-medium text-white'>
-                <span className='font-serif font-bold'>Zenieth bank</span>
-                <p>Account Name - Dominion Chapel</p>
-                <span className='flex items-center gap-6 font-bold'>
-                Account No - 123456789012
-                <FaCopy onClick={()=>copy(1234567)} className='hover:text-[3.5vh] text-[3vh]'/>
-                </span>
-              </div>
-            </div>
-          </div> */}
         </div>
+        {/* <!-- Card Body --> */}
+        <div className="p-6">
+          <div className='mb-4'>
+            <p className="text-gray-500 text-sm uppercase font-semibold">
+              Bank
+            </p>
+            <h4 className="text-gray-800 text-lg font-medium">XYZ Bank</h4>
+          </div>
+          <div className="mb-4">
+            <p className="text-gray-500 text-sm uppercase font-semibold">
+              Account Name
+            </p>
+            <h4 className="text-gray-800 text-lg font-medium">John Doe</h4>
+          </div>
+          <div className='flex items-center justify-between'>
+            <div className="mb-4">
+              <p className="text-gray-500 text-sm uppercase font-semibold">
+                Account Number
+              </p>
+              <h4 className="text-gray-800 text-lg font-medium">1234567890</h4>
+            </div>
+            <FaCopy onClick={()=>copy(1234567)} className='hover:text-[3.5vh] text-[3vh]'/>
+          </div>
+        </div>
+      </div>
     </div>
   )
 }

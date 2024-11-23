@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import Slideshow from '../components/slideshow'
-import Infinitystrip from '../components/infinitystrip'
-import About from '../components/about'
+// import About from '../components/about'
 import Loading from '../components/loading'
 import { FaAngleUp, FaAngleDown } from 'react-icons/fa';
+import Marquee from '../components/marquee'
+import Desktop_about from '../components/desktop_about';
 
 export default function Landing(){
 	const [display, setDisplay] = useState(false);
@@ -20,29 +21,30 @@ export default function Landing(){
 
 	const button = !display ? (<FaAngleUp/>) : (<FaAngleDown/>);
 
-	 return (
-	    <div className='relative lg:pt-1 md:pt-[12vh] max-w-[100%]'>
-	    	{
-	    		loading && <Loading/>
-	    	}
-	      <div className='relative ml-[4%] mr-[4%] w-[90%] h-[50vh]'>
-	      	<Slideshow/>
-	      </div>
-	      <div className='w-[100%] text-[black]' onClick={handleDays}>
-	      	<p className='text-center text-[white] font-semibold text-[3.3vh] font-serif cursor-pointer flex justify-center items-center gap-6'>Days of service {button}</p>
-	      	<Infinitystrip text='Sundays (Glorious service) 8am | Tuesday (Word@work service) 6:15am - 7:25am | Fridays (Divine Intervention Hour) 5pm - 6pm '/>
-	      	{
-	      		display && (
-	      				<div className='bg-gray-300 text-center flex flex-col gap-3'>
-					      	<p>Sundays (Glorious service) 8am</p><hr className/>
-					      	<p>Tuesday (Word@work service) 6:15am - 7:25am</p>
-					      	<p>Fridays (Divine Intervention Hour) 5pm - 6pm</p>
-					      </div>
-	      			)
-	      	}
-	      </div>
-	      <About/>
-		  {/* <iframe
+	return (
+		<div className='relative max-w-[100%] lg:pt-20'>
+			{
+				loading && <Loading/>
+			}
+			<div className='relative w-full h-[50vh]'>
+				<Slideshow/>
+			</div>
+			<div className='w-full mb-4 text-[black]' onClick={handleDays}>
+				<p className='text-center text-[white] font-semibold md:text-2xl font-serif cursor-pointer flex justify-center items-center gap-6 lg:mb-2'>Days of service {button}</p>
+				<Marquee />
+				{
+					display && (
+						<div className='bg-gray-300 text-center flex flex-col gap-3'>
+							<p>Sundays (Glorious service) 8am</p><hr className/>
+							<p>Tuesday (Word@work service) 6:15am - 7:25am</p>
+							<p>Fridays (Divine Intervention Hour) 5pm - 6pm</p>
+						</div>
+					)
+				}
+			</div>
+			{/* <About/> */}
+			<Desktop_about/>
+			{/* <iframe
 			width="600"
 			height="450"
 			style="border:0"
@@ -52,6 +54,6 @@ export default function Landing(){
 			src="https://www.google.com/maps/embed/v1/place?key=API_KEY
 				&q=Space+Needle,Seattle+WA">
 			</iframe> */}
-	    </div>
+		</div>
   );
 }

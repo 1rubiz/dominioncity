@@ -1,4 +1,17 @@
-.logo {
+@keyframes scroll {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  .animate-scroll {
+    animation: scroll 18s linear infinite;
+  }
+
+/* .logo {
   height: 6em;
   padding: 1.5em;
   will-change: filter;
@@ -42,4 +55,4 @@
 
 .read-the-docs {
   color: #888;
-}
+} */
