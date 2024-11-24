@@ -115,9 +115,6 @@ import { useLocation } from 'react-router-dom';
 
 function Nav() {
   const { pathname } = useLocation()
-  useEffect(()=>{
-    console.log(pathname)
-  }, [pathname])
   return (
     <div className='fixed z-40 w-full top-0 right-0 bg-transparent flex items-center justify-center p-4'>
       <div className='flex items-center justify-between w-full lg:w-1/2 bg-white/30 backdrop-blur-md border border-white/50 rounded-xl md:w-[80%] shadow-lg py-2 px-4 lg:py-1'>

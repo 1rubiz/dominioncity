@@ -1,10 +1,12 @@
-import React, { useRef, useEffect, useState } from "react";
+/* eslint-disable react/prop-types */
+import { useRef, useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import useViewStore from "../store/view";
 
 const TaperedCarousel = ({ items }) => {
   const carouselRef = useRef(null); // Reference to the carousel container
   const [constraints, setConstraints] = useState({ left: 0, right: 0 });
-
+  const { setView } = useViewStore()
   useEffect(() => {
     if (carouselRef.current) {
       const containerWidth = carouselRef.current.offsetWidth; // Width of the container
@@ -28,7 +30,7 @@ const TaperedCarousel = ({ items }) => {
         {items.map((item, index) => (
           <motion.div
             key={index}
-            className="flex-shrink-0 w-48 h-64 bg-white rounded-lg shadow-lg flex items-center justify-center text-center text-lg font-semibold"
+            className="flex-shrink-0 h-36 w-36 bg-white rounded-lg shadow-lg flex items-center justify-center text-center text-lg font-semibold"
             style={{
               backgroundImage: `url(${item.image})`,
               backgroundSize: "cover",
@@ -47,6 +49,7 @@ const TaperedCarousel = ({ items }) => {
               duration: 0.4,
               ease: "easeInOut",
             }}
+            onClick={()=> setView(item.image)}
           >
             {item.title}
           </motion.div>

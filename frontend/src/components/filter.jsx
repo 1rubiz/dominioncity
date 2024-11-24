@@ -23,24 +23,6 @@ const FilterSection = ({ events, onFilterChange }) => {
       <div className="w-full col-span-2">
         {selectedEvent}
       </div>
-      {/* <div className="col-span-1 flex flex-col text-xs w-full">
-        <label htmlFor="year-filter" className="text-gray-200 font-semibold mb-2 text-xs">
-          Select Year
-        </label>
-        <select
-          id="year-filter"
-          value={selectedYear}
-          onChange={handleYearChange}
-          className="border border-gray-300 rounded-md px-3 py-2 text-gray-800 focus:ring focus:ring-blue-300 focus:outline-none"
-        >
-          <option value="">All Years</option>
-          {years.map((year) => (
-            <option key={year} value={year}>
-              {year}
-            </option>
-          ))}
-        </select>
-      </div> */}
 
       {/* Event Dropdown */}
       <div className="col-span-2 flex flex-col text-xs w-full">
