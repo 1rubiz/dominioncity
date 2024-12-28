@@ -32,7 +32,7 @@ const TaperedCarousel = ({ items }) => {
             key={index}
             className="flex-shrink-0 h-36 w-36 bg-white rounded-lg shadow-lg flex items-center justify-center text-center text-lg font-semibold"
             style={{
-              backgroundImage: `url(${item.image})`,
+              backgroundImage: `url(${item.imageUrl})`,
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}
@@ -49,7 +49,7 @@ const TaperedCarousel = ({ items }) => {
               duration: 0.4,
               ease: "easeInOut",
             }}
-            onClick={()=> setView(item.image)}
+            onClick={()=> setView(item.imageUrl)}
           >
             {item.title}
           </motion.div>

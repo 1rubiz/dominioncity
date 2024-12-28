@@ -1,6 +1,6 @@
 // import React from 'react'
 // import { useState } from 'react';
-import { useEffect } from 'react';
+// import { useEffect } from 'react';
 import { FaHome, FaCamera, FaMoneyBill, FaImages, FaYoutube } from 'react-icons/fa';
 // import { IoCloseOutline } from 'react-icons/io5';
 // import { FaBars } from 'react-icons/fa';
@@ -115,23 +115,47 @@ import { useLocation } from 'react-router-dom';
 
 function Nav() {
   const { pathname } = useLocation()
+  // async function onSubmit(values) {
+  //   // Do something with the form values.
+  //   // ✅ This will be type-safe and validated.
+  //   try{
+  //     console.log(values)
+  //     const {email, password} = values
+  //     const response =await axios.post(url, {email, password})
+  //     console.log(response)
+  //     if(response.status === 200){
+  //       sessionStorage.clear()
+  //     window.location.replace(adimnUrl);
+  //     }
+  //   }catch(err){
+  //     console.log(err)
+  //     toast({
+  //       title: `${err.response?.data.message}: You are not an admin!!!`,
+  //       variant: 'destructive'
+  //     })
+  //   }
+  //   // sessionStorage.setItem()
+  //   // sessionStorage.setItem('token', JSON.stringify(response.data.token))
+  //   // navigate('/redirect')
+  // }
+
   return (
     <div className='fixed z-40 w-full top-0 right-0 bg-transparent flex items-center justify-center p-4'>
       <div className='flex items-center justify-between w-full lg:w-1/2 bg-white/30 backdrop-blur-md border border-white/50 rounded-xl md:w-[80%] shadow-lg py-2 px-4 lg:py-1'>
-        <Link to='/'><div className={`${pathname === '/' && 'bg-black rounded-md'} flex items-center gap-2 text-xl hover:border-b-2 p-2 border-[#9B2915]`}>
-          <FaHome className='text-base md:text-2xl text-[#F4F7F5]'/>
+        <Link to='/'><div className={`${pathname === '/' && 'bg-[#222823] rounded-md'} flex items-center gap-2 text-xl hover:border-b-2 p-2 border-[#9B2915]`}>
+          <FaHome className='text-base md:text-2xl text-[#F4F7F5]' />
           <p className='text-gray-200 hidden md:inline-block'>Home</p>
         </div></Link>
-        <Link to='/media'><div className={`${pathname === '/media' && 'bg-black rounded-md'} flex items-center gap-2 text-xl hover:border-b-2 p-2 border-[#9B2915]`}>
-          <FaCamera className='text-base md:text-2xl text-[#F4F7F5]'/>
+        <Link to='/media'><div className={`${pathname === '/media' && 'bg-[#222823] rounded-md'} flex items-center gap-2 text-xl hover:border-b-2 p-2 border-[#9B2915]`}>
+          <FaCamera className='text-base md:text-2xl text-[#F4F7F5]' />
           <p className='text-gray-200 hidden md:inline-block'>Media</p>
         </div></Link>
-        <Link to='/offering'><div className={`${pathname === '/offering' && 'bg-black rounded-md'} flex items-center gap-2 text-xl hover:border-b-2 p-2 border-[#9B2915]`}>
-          <FaMoneyBill className='text-base md:text-2xl text-[#F4F7F5]'/>
+        <Link to='/offering'><div className={`${pathname === '/offering' && 'bg-[#222823] rounded-md'} flex items-center gap-2 text-xl hover:border-b-2 p-2 border-[#9B2915]`}>
+          <FaMoneyBill className='text-base md:text-2xl text-[#F4F7F5]' />
           <p className='text-gray-200 hidden md:inline-block'>Offerings</p>
         </div></Link>
-        <Link to='/gallery'><div className={`${pathname === '/gallery' && 'bg-black rounded-md'} flex items-center gap-2 text-xl hover:border-b-2 p-2 border-[#9B2915]`}>
-          <FaImages className='text-base md:text-2xl text-[#F4F7F5]'/>
+        <Link to='/gallery'><div className={`${pathname === '/gallery' && 'bg-[#222823] rounded-md'} flex items-center gap-2 text-xl hover:border-b-2 p-2 border-[#9B2915]`}>
+          <FaImages className='text-base md:text-2xl text-[#F4F7F5]' />
           <p className='text-gray-200 hidden md:inline-block'>Gallery</p>
         </div></Link>
       </div>

@@ -7,11 +7,18 @@ import Gallery from './pages/Gallery'
 import Payments from './pages/Payments'
 import Media from './pages/Media'
 import ErrorPage from './pages/ErrorPage';
+import { Toaster } from "@/components/ui/toaster"
+import useLoadingStore from './store/loading'
+import Loading from './components/loading'
 // import Home from './pages/Home'
 
 function App() {
+  const { loading } = useLoadingStore()
   return (
      <BrowserRouter>
+      {
+        loading && <Loading/>
+      }
       <div className='bg-[#222823] max-h-screen md:overflow-hidden md:flex'>
         <Nav/>
         <div className='md:w-full md:max-h-screen md:overflow-x-hidden'>
@@ -24,6 +31,7 @@ function App() {
         </Routes>
         <Footer/>
         </div>
+        <Toaster />
       </div>
     </BrowserRouter>
 
