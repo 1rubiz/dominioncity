@@ -44,6 +44,8 @@ export default function Slideshow() {
     getData()
   }, [])
   useEffect(() => {
+    if (data.length === 0) return; 
+
     const interval = setInterval(() => {
       // Move to the next image
       setNum((prevIndex) => (prevIndex + 1) % data.length);
