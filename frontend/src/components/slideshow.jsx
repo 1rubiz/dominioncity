@@ -29,7 +29,7 @@ export default function Slideshow() {
         title: response.data.message,
         variant: 'success'
       })
-      console.log(response)
+      // console.log(response)
       // console.log(response.data.data[0].carousel)
       setData(response.data.data)
     } catch (err) {
