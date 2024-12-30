@@ -13,7 +13,7 @@ export default function Slideshow() {
 
   const getData = async () => {
     // console.log('fetching')
-    console.log(`${apiUrl}/api/carousel`);
+    // console.log(`${apiUrl}/api/carousel`);
     start()
     const token = sessionStorage.getItem('token')
     try {
