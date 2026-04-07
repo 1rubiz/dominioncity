@@ -36,9 +36,6 @@ function About() {
             <h3 className="font-headline text-3xl mb-6 tracking-tight">
               The Word
             </h3>
-            <h3 className="font-headline text-3xl mb-6 tracking-tight">
-              The Word
-            </h3>
             <p className="font-sans text-sm leading-relaxed text-on-primary-container max-w-xs">
               Uncompromising biblical teaching that empowers you to live a life
               of spiritual authority and purpose.

@@ -65,9 +65,7 @@ export default function Media() {
     fetchVideos();
   }, []);
 
-  // Fetch gallery collections
-  useEffect(() => {
-    const fetchCollections = async () => {
+  const fetchCollections = async () => {
       start();
       try {
         const token = sessionStorage.getItem('token');
@@ -89,8 +87,33 @@ export default function Media() {
         stop();
       }
     };
-    fetchCollections();
-  }, []);
+
+  // Fetch gallery collections
+  // useEffect(() => {
+  //   const fetchCollections = async () => {
+  //     start();
+  //     try {
+  //       const token = sessionStorage.getItem('token');
+  //       const response = await axios.get(`${apiUrl}/api/gallery/collections`, {
+  //         headers: {
+  //           Authorization: token,
+  //         },
+  //       });
+  //       if (response.status === 200) {
+  //         setCollections(response.data);
+  //         if (response.data.length > 0) {
+  //           setSelectedCollection(response.data[0]);
+  //         }
+  //       }
+  //     } catch (error) {
+  //       toast.error('Failed to fetch collections');
+  //       console.error(error);
+  //     } finally {
+  //       stop();
+  //     }
+  //   };
+  //   fetchCollections();
+  // }, []);
 
   // Fetch gallery images based on selected collection
   useEffect(() => {
@@ -157,7 +180,7 @@ export default function Media() {
               Videos
             </button>
             <button
-              onClick={() => setActiveTab('gallery')}
+              onClick={() => {setActiveTab('gallery'); fetchCollections()}}
               className={`px-6 py-4 font-bold text-xs uppercase tracking-wider transition-all ${
                 activeTab === 'gallery'
                   ? 'text-secondary border-b-2 border-slate-600'
