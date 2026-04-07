@@ -44,9 +44,9 @@ const Form = () => {
 
 
   return (
-      <div className='max-h-[100%]'>
+      <div className='max-h-full'>
       {
-          loading && (<div className='fixed z-10 top-0 left-0 w-[100%] h-screen'><Loading/></div>)
+          loading && (<div className='fixed z-10 top-0 left-0 w-full h-screen'><Loading/></div>)
         }
       <div id='contact' className='text-[27px] flex justify-center items-center'>Co<span className='border-b-2 border-b-[#9B2915]'>ntact U</span>s <FaMapMarkerAlt className='pl-3'/></div>
         <motion.div 
@@ -62,7 +62,7 @@ const Form = () => {
               >
                <Toaster/>
                 <Input 
-                customClass='bg-[#c5fbbd] mb-3 focus:bg-[white] w-[100%] h-[5.5vh]'
+                customClass='bg-[#c5fbbd] mb-3 focus:bg-[white] w-full h-[5.5vh]'
                 labelText='Email' 
                 name='from_name'
                 id='from_name'
@@ -70,7 +70,7 @@ const Form = () => {
                 labelFor='Name'/>
                       
                 <Input 
-                customClass='bg-[#c5fbbd] mb-2 focus:bg-[white] w-[100%] h-[5.5vh]'
+                customClass='bg-[#c5fbbd] mb-2 focus:bg-[white] w-full h-[5.5vh]'
                 labelText='Email'
                 name='email'
                 id='email'
@@ -80,7 +80,7 @@ const Form = () => {
                 name='message'
                 id='message'
                 placeholder='Email body....'
-                className='p-2 w-[100%] min-h-[15vh] pl-3 text-black border-2 border-white'
+                className='p-2 w-full min-h-[15vh] pl-3 text-black border-2 border-white'
                 />
               <button id='emailBtn' className='bg-[#3E5C76] hover:border-[white] font-bold text-[1.8vh] text-white hover:border-2 w-full h-[5.5vh]'>Submit</button>
           </form>

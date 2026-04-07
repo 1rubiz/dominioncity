@@ -30,7 +30,7 @@ const TaperedCarousel = ({ items }) => {
         {items.map((item, index) => (
           <motion.div
             key={index}
-            className="flex-shrink-0 h-36 w-36 bg-white rounded-lg shadow-lg flex items-center justify-center text-center text-lg font-semibold"
+            className="shrink-0 h-36 w-36 bg-white rounded-lg shadow-lg flex items-center justify-center text-center text-lg font-semibold"
             style={{
               backgroundImage: `url(${item.imageUrl})`,
               backgroundSize: "cover",

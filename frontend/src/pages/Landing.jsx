@@ -14,7 +14,7 @@ export default function Landing() {
 	const button = !display ? (<FaAngleUp />) : (<FaAngleDown />);
 
 	return (
-		<div className='relative max-w-[100%] lg:pt-20'>
+		<div className='relative max-w-full lg:pt-20'>
 			<div className='relative w-full h-[50vh] my-4'>
 				<Slideshow />
 			</div>

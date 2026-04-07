@@ -2,7 +2,7 @@
 
 const FilterSection = ({ events, selectedEvent, setSelectedEvent }) => {
   return (
-    <div className="grid grid-cols-2 w-full text-white md:flex-row gap-2 p-2 bg-gradient-to-r from-[#817F75] to-[#08090A] shadow-lg rounded-md">
+    <div className="grid grid-cols-2 w-full text-white md:flex-row gap-2 p-2 bg-linear-to-r from-[#817F75] to-[#08090A] shadow-lg rounded-md">
       {/* Year Dropdown */}
       <div className="w-full col-span-2">
         {selectedEvent}

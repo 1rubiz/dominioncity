@@ -47,7 +47,7 @@ const Youtube = () => {
 						<p className='text-[2vh] text-white'>{video.snippet.title}</p>
 					</div>
 				))) : (
-					<div className='text-center flex items-center justify-center lg:h-[12vh] w-[100%] bg-white opacity-80'><h3>Oops.....No videos</h3></div>
+					<div className='text-center flex items-center justify-center lg:h-[12vh] w-full bg-white opacity-80'><h3>Oops.....No videos</h3></div>
 				)
 				}
 			</div>

@@ -10,8 +10,8 @@ function Marquee() {
         </div>
         {/* <!-- Optional fading edges --> */}
         <div className="absolute inset-0 pointer-events-none">
-            <div className="w-16 h-full bg-gradient-to-r from-white to-transparent absolute left-0"></div>
-            <div className="w-16 h-full bg-gradient-to-l from-white to-transparent absolute right-0"></div>
+            <div className="w-16 h-full bg-linear-to-r from-white to-transparent absolute left-0"></div>
+            <div className="w-16 h-full bg-linear-to-l from-white to-transparent absolute right-0"></div>
         </div>
     </div>
   )

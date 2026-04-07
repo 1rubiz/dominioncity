@@ -78,7 +78,7 @@ function FooterInfo() {
                 <Form />
             </div>
             <div className='w-full lg:w-[45%] px-8 lg:px-4'> 
-                <div className='w-[100%] text-center flex flex-col gap-2'>
+                <div className='w-full text-center flex flex-col gap-2'>
                     <p className='flex items-center justify-center gap-3'>
                         <FaMapMarkerAlt /> 48, OKUNGBOWA STREET, OFF SILUKO ROAD, OGIDA QUARTERS BENIN CITY.
                     </p>

@@ -60,7 +60,7 @@ function Payments() {
           return (
             <div key={key} className="w-full max-w-md mx-auto bg-white shadow-lg rounded-xl overflow-hidden border border-gray-200">
               {/* <!-- Card Header --> */}
-              <div className="flex items-center bg-gradient-to-r from-[#817F75] to-[#08090A] p-4">
+              <div className="flex items-center bg-linear-to-r from-[#817F75] to-[#08090A] p-4">
                 <img
                   src="/UBA-logo-2.gif"
                   alt="Bank Logo"

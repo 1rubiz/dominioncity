@@ -11,7 +11,7 @@ export default function Infinitystrip({ text }){
 	}, [text.length]);
 
 	return(
-		<div className='relative overflow-hidden h-[7vh] w-[100%] bg-white hover:bg-gray-300'>
+		<div className='relative overflow-hidden h-[7vh] w-full bg-white hover:bg-gray-300'>
 			<div className='absolute whitespace-nowrap text-center text-[3vh] font-semibold'
 				style={{ transform: `translateX(${-position + 22}px)`}}>
 				<span>{text}</span>

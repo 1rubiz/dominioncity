@@ -102,7 +102,7 @@ function Gallery() {
   }, [selectedEvent])
 
   return (
-    <div className='relative px-4 w-[100%] pb-9 pt-20'>
+    <div className='relative px-4 w-full pb-9 pt-20'>
       <h1 className='text-white text-3xl font-bold'>Gallery</h1>
       <div className="my-2 md:w-1/2">
         {/* <h1 className="text-2xl font-bold mb-4">Filter Example</h1> */}
@@ -140,7 +140,7 @@ const ImageDisplay = ({ imageUrl }) => {
         </div>
       )}
       {!imageUrl && (
-        <div className="absolute inset-0 bg-gradient-to-t from-gray-800 to-transparent opacity-30"></div>
+        <div className="absolute inset-0 bg-linear-to-t from-gray-800 to-transparent opacity-30"></div>
       )}
       <div className='text-xs flex flex-col absolute top-1/4 right-2 gap-4'>
         <button onClick={() => setSize('fill')} className={`text-white border rounded-md px-1 ${imgSize === 'fill' && 'bg-[#222823]'}`}>Stretch</button>
