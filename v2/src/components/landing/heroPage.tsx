@@ -26,7 +26,7 @@ function HeroPage() {
               className="bg-secondary text-white px-10 py-5 text-sm uppercase tracking-widest font-bold w-full md:w-auto hover:bg-on-secondary-container transition-all"
               href="#"
             >
-              Join Us Sunday
+              Join Us Every Sunday
             </a>
             <a
               className="border border-white text-white px-10 py-5 text-sm uppercase tracking-widest font-bold w-full md:w-auto hover:bg-white hover:text-black transition-all"
@@ -39,12 +39,12 @@ function HeroPage() {
         <div className="absolute bottom-0 w-full bg-black/40 backdrop-blur-md py-8 border-t border-white/10">
           <div className="flex flex-wrap justify-center items-center gap-4 md:gap-8 font-sans text-[10px] md:text-xs tracking-[0.2em] text-white uppercase font-medium">
             <span>SUNDAYS 8AM</span>
-            <span className="text-secondary">•</span>
-            <span>10AM</span>
-            <span className="text-secondary">•</span>
-            <span>6PM</span>
+            <span className="text-secondary">-</span>
+            <span>11:30AM</span>
+            {/* <span className="text-secondary">•</span> */}
+            {/* <span>6PM</span> */}
             <span className="mx-4 text-white/30 hidden md:inline">|</span>
-            <span>WEDNESDAYS 6:30PM</span>
+            <span>THURSDAYS 6:30AM</span>
           </div>
         </div>
       </header>

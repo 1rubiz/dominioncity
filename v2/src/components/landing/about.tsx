@@ -1,4 +1,88 @@
+'use client';
+
+import { useState } from 'react';
+import { ChevronDown, Eye, EyeOff, NotebookPenIcon } from 'lucide-react';
+
+interface Event {
+  id: string;
+  title: string;
+  date: string;
+  dateFormatted: string;
+  icon: React.ReactNode;
+}
+
+const EVENTS: Event[] = [
+  {
+    id: '1',
+    title: 'BREAKTHROUGH SUMMIT/ ANNIVERSARY',
+    date: 'SAT 16TH - SUNDAY 17TH MAY, 2026',
+    dateFormatted: 'MAY 16-17',
+    icon: <NotebookPenIcon className="w-6 h-6" />,
+  },
+  {
+    id: '2',
+    title: 'CHILDREN CONVENTION',
+    date: 'SAT 20TH - SUN 21ST JUNE, 2026',
+    dateFormatted: 'JUN 20-21',
+    icon: <NotebookPenIcon className="w-6 h-6" />,
+  },
+  {
+    id: '3',
+    title: "FOUNDER'S DAY CELEBRATION",
+    date: '2ND AUGUST, 2026',
+    dateFormatted: 'AUG 2',
+    icon: <NotebookPenIcon className="w-6 h-6" />,
+  },
+  {
+    id: '4',
+    title: 'BRINGING DOWN HIS GLORY',
+    date: 'SUN 23RD AUGUST, 2026',
+    dateFormatted: 'AUG 23',
+    icon: <NotebookPenIcon className="w-6 h-6" />,
+  },
+  {
+    id: '5',
+    title: 'YOUTH CONVENTION',
+    date: 'SAT 19TH- SUN 20TH SEPT, 2026',
+    dateFormatted: 'SEP 19-20',
+    icon: <NotebookPenIcon className="w-6 h-6" />,
+  },
+  {
+    id: '6',
+    title: 'MEGA CONVENTION',
+    date: '23RD-25TH OCT, 2026',
+    dateFormatted: 'OCT 23-25',
+    icon: <NotebookPenIcon className="w-6 h-6" />,
+  },
+  {
+    id: '7',
+    title: 'ANNUAL THANKSGIVING SERVICE',
+    date: '29TH NOV, 2026',
+    dateFormatted: 'NOV 29',
+    icon: <NotebookPenIcon className="w-6 h-6" />,
+  },
+  {
+    id: '8',
+    title: 'LIBERATION SERVICE',
+    date: '27TH DEC, 2026',
+    dateFormatted: 'DEC 27',
+    icon: <NotebookPenIcon className="w-6 h-6" />,
+  },
+  {
+    id: '9',
+    title: 'CROSS OVER SERVICE',
+    date: 'THURS 31ST DEC, 2026',
+    dateFormatted: 'DEC 31',
+    icon: <NotebookPenIcon className="w-6 h-6" />,
+  },
+];
+
 function About() {
+  const [showEvents, setShowEvents] = useState(true);
+  const [expandedEvents, setExpandedEvents] = useState(false);
+
+  const displayedEvents = expandedEvents ? EVENTS : EVENTS.slice(0, 3);
+
   return (
     <>
       <section className="bg-surface py-32 px-12 text-center border-y border-secondary/20">
@@ -60,48 +144,60 @@ function About() {
           <h2 className="font-headline text-5xl tracking-tighter uppercase text-primary">
             Upcoming Events
           </h2>
-          <a
-            className="font-sans text-xs uppercase tracking-widest font-bold text-secondary hover:underline transition-all"
-            href="#"
-          >
-            View All Events →
-          </a>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-0 border-x border-outline-variant">
-          <div className="p-12 border-r border-outline-variant group hover:bg-surface transition-colors duration-500 cursor-pointer">
-            <span className="font-headline text-6xl text-secondary block mb-8 font-light">
-              MAR 30
-            </span>
-            <h4 className="font-headline text-2xl mb-4 text-on-surface group-hover:text-secondary transition-colors">
-              Dominion Men's Breakfast
-            </h4>
-            <p className="font-sans text-xs text-on-surface-variant uppercase tracking-widest">
-              8:00 AM • Main Sanctuary
-            </p>
-          </div>
-          <div className="p-12 border-r border-outline-variant group hover:bg-surface transition-colors duration-500 cursor-pointer">
-            <span className="font-headline text-6xl text-secondary block mb-8 font-light">
-              APR 05
-            </span>
-            <h4 className="font-headline text-2xl mb-4 text-on-surface group-hover:text-secondary transition-colors">
-              Night of Miracles
-            </h4>
-            <p className="font-sans text-xs text-on-surface-variant uppercase tracking-widest">
-              7:00 PM • Worship Center
-            </p>
-          </div>
-          <div className="p-12 group hover:bg-surface transition-colors duration-500 cursor-pointer">
-            <span className="font-headline text-6xl text-secondary block mb-8 font-light">
-              APR 12
-            </span>
-            <h4 className="font-headline text-2xl mb-4 text-on-surface group-hover:text-secondary transition-colors">
-              Worship Workshop
-            </h4>
-            <p className="font-sans text-xs text-on-surface-variant uppercase tracking-widest">
-              10:00 AM • Room 302
-            </p>
+          <div className="flex gap-4 items-center">
+            <button
+              onClick={() => setShowEvents(!showEvents)}
+              className="flex items-center gap-2 font-sans text-xs uppercase tracking-widest font-bold text-secondary hover:text-primary transition-colors"
+              aria-label="Toggle events visibility"
+            >
+              {showEvents ? (
+                <Eye className="w-4 h-4" />
+              ) : (
+                <EyeOff className="w-4 h-4" />
+              )}
+              {showEvents ? 'Hide' : 'Show'}
+            </button>
           </div>
         </div>
+
+        {showEvents && (
+          <>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-0 border-x border-outline-variant">
+              {displayedEvents.map((event, index) => (
+                <div
+                  key={event.id}
+                  className={`p-12 ${index < displayedEvents.length - 1 && displayedEvents.length <= 3 ? 'border-r' : displayedEvents.length > 3 && index % 3 !== 2 ? 'border-r' : ''} ${index >= displayedEvents.length - 3 && displayedEvents.length > 3 ? '' : index < displayedEvents.length - 3 ? 'border-b' : ''} border-outline-variant group hover:bg-surface transition-colors duration-500 cursor-pointer`}
+                >
+                  <span className="font-headline text-6xl text-secondary block mb-8 font-light">
+                    {event.dateFormatted}
+                  </span>
+                  <h4 className="flex gap-2 font-headline text-2xl mb-4 text-on-surface group-hover:text-secondary transition-colors">
+                    {event.icon} {event.title}
+                  </h4>
+                  <p className="font-sans text-xs text-on-surface-variant uppercase tracking-widest">
+                    {event.date}
+                  </p>
+                </div>
+              ))}
+            </div>
+
+            {EVENTS.length > 3 && (
+              <div className="flex justify-center mt-12">
+                <button
+                  onClick={() => setExpandedEvents(!expandedEvents)}
+                  className="flex items-center gap-2 font-sans text-xs uppercase tracking-widest font-bold text-secondary hover:text-primary transition-colors py-2 px-6 border border-outline-variant rounded hover:bg-surface/50"
+                >
+                  {expandedEvents ? 'Show Less' : 'See All Events'}
+                  <ChevronDown
+                    className={`w-4 h-4 transition-transform duration-300 ${
+                      expandedEvents ? 'rotate-180' : ''
+                    }`}
+                  />
+                </button>
+              </div>
+            )}
+          </>
+        )}
       </section>
     </>
   );

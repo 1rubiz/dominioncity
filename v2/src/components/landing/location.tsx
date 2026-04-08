@@ -34,11 +34,11 @@ function Location() {
               SUNDAY MORNING
             </p>
             <div className="flex justify-between items-center">
-              <span className="font-headline text-2xl">First Service</span>
-              <span className="font-sans text-sm font-bold">08:00 AM</span>
+              {/* <span className="font-headline text-2xl">First Service</span> */}
+              <span className="font-sans text-sm font-bold">8 AM - 11:30 AM</span>
             </div>
           </div>
-          <div className="border-b border-outline pb-6">
+          {/* <div className="border-b border-outline pb-6">
             <p className="font-sans text-[10px] uppercase tracking-widest font-bold text-secondary mb-2">
               SUNDAY MORNING
             </p>
@@ -48,23 +48,23 @@ function Location() {
               </span>
               <span className="font-sans text-sm font-bold">10:00 AM</span>
             </div>
-          </div>
+          </div> */}
           <div className="border-b border-outline pb-6">
             <p className="font-sans text-[10px] uppercase tracking-widest font-bold text-secondary mb-2">
-              SUNDAY EVENING
+              THURSDAY MORNING
             </p>
             <div className="flex justify-between items-center">
-              <span className="font-headline text-2xl">Prophetic Hour</span>
-              <span className="font-sans text-sm font-bold">06:00 PM</span>
+              {/* <span className="font-headline text-2xl">Prophetic Hour</span> */}
+              <span className="font-sans text-sm font-bold">6:30 AM - 7:45 AM</span>
             </div>
           </div>
           <div>
             <p className="font-sans text-[10px] uppercase tracking-widest font-bold text-secondary mb-2">
-              WEDNESDAY NIGHT
+              FRIDAY EVENING
             </p>
             <div className="flex justify-between items-center">
-              <span className="font-headline text-2xl">Dominion Study</span>
-              <span className="font-sans text-sm font-bold">06:30 PM</span>
+              {/* <span className="font-headline text-2xl">Dominion Study</span> */}
+              <span className="font-sans text-sm font-bold">5 PM - 6 PM</span>
             </div>
           </div>
         </div>
