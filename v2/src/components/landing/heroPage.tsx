@@ -11,12 +11,12 @@ function HeroPage() {
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/80"></div>
         </div>
-        <div className="relative z-10 max-w-6xl">
+        <div className="relative pt-[30dvh] md:pt-12 z-10 max-w-6xl">
           <span className="font-sans text-xs uppercase tracking-[0.4em] text-white text-surface-variant mb-6 block font-bold">
             WELCOME TO
           </span>
           <h1 className="font-headline text-7xl md:text-[120px] leading-[0.9] text-white font-light tracking-tighter uppercase mb-8">
-            Chapel of <br /> Dominion Ministry
+            Chapel of <br /> Dominion Ministries INC.
           </h1>
           <p className="font-headline italic text-2xl md:text-3xl text-white text-surface-variant font-extralight mb-12">
             Where Dominion Is Declared

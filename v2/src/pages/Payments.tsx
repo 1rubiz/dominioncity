@@ -77,7 +77,7 @@ export default function Payments() {
   };
 
   return (
-    <div className='w-full py-20 min-h-screen bg-background text-on-surface'>
+    <div className='w-full py-20 min-h-screen text-on-surface'>
       {/* Header Section */}
       <div className='pt-20 pb-12 px-4 sm:px-6 lg:px-8'>
         <motion.div

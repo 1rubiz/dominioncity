@@ -146,7 +146,7 @@ export default function Media() {
   };
 
   return (
-    <div className="bg-on-surface text-on-surface font-body">
+    <div className="text-on-surface font-body">
       {/* Hero Section */}
       {/* <section className="relative pb-20 w-full overflow-hidden bg-primary">
         <div className="absolute inset-0 z-0 bg-linear-to-br from-primary/80 to-background"></div>
